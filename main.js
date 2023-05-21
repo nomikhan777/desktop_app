@@ -15,7 +15,7 @@ function createWindow() {
   });
 
   // Load the index.html file
-  win.loadFile("index.html");
+  win.loadFile("adminDashboard.html");
 
   win.webContents.on("dom-ready", () => {
     // Access the element by id
