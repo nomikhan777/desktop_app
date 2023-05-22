@@ -3,8 +3,14 @@ async function getEmployees() {
   const employees = await response.json();
   console.log(employees);
   const tbody = document.getElementById("attendance__table__tbody");
-  employees.forEach((employee) => {
+  employees.forEach(async (employee) => {
     const tr = document.createElement("tr");
+    const userData = await fetch(
+      `http://localhost:8080/emp-day-record?emp_id=${
+        employee.id
+      }&currentDate=${getDateFormatted()}`
+    );
+    console.log(await userData.json());
     tr.innerHTML = `
             <td>${employee.name}</td>
             <td>${
