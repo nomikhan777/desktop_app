@@ -39,7 +39,7 @@ async function checkout(id) {
   const formattedDateOnly = getDateFormatted();
   console.log(formattedDate);
   const response = await fetch(
-    `http://localhost:8080/update-checkout?emp_id=${id}&currentDate=${formattedDateOnly}&checkout="${formattedDate}"`
+    `http://localhost:8080/update-checkout?emp_id=${id}&currentDate=${formattedDateOnly}&checkout=${formattedDate}`
   );
   window.location.reload();
   console.log(await response.json());
