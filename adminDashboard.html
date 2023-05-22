@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
       button{
-        right: 3rem;
-        margin: 0.5rem;
+        /* margin: 0.5rem; */
         padding: .5rem 0.5rem;
         border: 1px solid #ccc;
         border-radius: 0.5rem;
@@ -19,14 +18,35 @@
         cursor: pointer;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        position: absolute;
+      }
+      section{
+        /* position: absolute; */
+        left: 50%;
+        translate: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        margin-left: 3rem;
+      }
+      section input{
+        display: block;
+        padding: 0rem;
+        height: 30px;
+        padding: 0 0.5rem;
+        border-radius: 8px;
       }
     </style>
   </head>
   <body>
-    <button id="logoutUserBtn">Logout</button>
+    <button id="logoutUserBtn" style="right: 3rem;position: absolute;">Logout</button>
     <a href="login.html" id="loginNavigator"></a>
     <h1>Dashboard</h1>
+    <p style="margin-left: 3rem; color: red;" id="error"></p>
+      <section>
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="text" name="division" id="division" placeholder="Division">
+        <button id="addUserBtn">Add</button>
+      </section>
+    
     <table>
       <thead>
         <tr>

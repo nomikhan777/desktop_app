@@ -26,3 +26,9 @@ async function loginUser(e) {
 document.getElementById("submitBtn").addEventListener("click", (e) => {
   loginUser(e);
 });
+
+window.onload = () => {
+  if (localStorage.getItem("isUserLoggedIn")) {
+    document.getElementById("adminDashboardNavigator").click();
+  }
+};

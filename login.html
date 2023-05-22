@@ -39,9 +39,9 @@
         background-color: #ccc;
       }
       a{
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
+      }
+      small{
+        font-size: 0.9rem;
       }
       p{
         color: red;
@@ -52,7 +52,6 @@
   </head>
   <body>
     <form>
-      <a href="index.html"><i style="width: 17px; height: 17px;" class="fa-regular fa-delete-left"></i>Go Back</a>
       <h2>LOGIN</h2>
       <!-- <label for="name">Name: </label> -->
       <p id="loginError"></p>
@@ -60,6 +59,7 @@
       <!-- <label for="password">Password: </label> -->
       <input type="password" name="password" id="password" placeholder="Password" />
       <button id="submitBtn">LOGIN</button>
+      <small>Have to mark the attendance? <a href="index.html"><i style="width: 17px; height: 17px;" class="fa-regular fa-delete-left"></i>Attendance</a></small>
       <a href="adminDashboard.html" id="adminDashboardNavigator"></a>
     </form>
     <script src="main.js"></script>
