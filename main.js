@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require("electron");
-const path = require("path");
-const url = require("url");
+const electronIpcMain = require("electron").ipcMain;
 
+let win;
 function createWindow() {
   // Create the browser window
   const win = new BrowserWindow({
@@ -15,7 +15,7 @@ function createWindow() {
   });
 
   // Load the index.html file
-  win.loadFile("adminDashboard.html");
+  win.loadFile("index.html");
 
   win.webContents.on("dom-ready", () => {
     // Access the element by id

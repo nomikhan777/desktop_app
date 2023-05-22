@@ -6,35 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      button{
+        right: 3rem;
+        margin: 0.5rem;
+        padding: .5rem 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        min-width: 3rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        position: absolute;
+      }
+    </style>
   </head>
   <body>
+    <button id="logoutUserBtn">Logout</button>
+    <a href="login.html" id="loginNavigator"></a>
     <h1>Dashboard</h1>
     <table>
       <thead>
         <tr>
+          <th>Id</th>
           <th>Name</th>
           <th>Division</th>
           <th>Hours Per Day</th>
           <th>Hours Per Weak</th>
           <th>Status</th>
+          <th>Target Hrs.</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>John Doe</td>
-          <td>Developer</td>
-          <td>9hr</td>
-          <td>50hr</td>
-          <td>Completed</td>
-        </tr>
-        <tr>
-          <td>Numan Doe</td>
-          <td>Developer</td>
-          <td>5hr</td>
-          <td>25hr</td>
-          <td>incomplete</td>
-        </tr>
+      <tbody id="attendance__table__tbody">
       </tbody>
     </table>
   </body>
+  <script src="./utils/admin.js"></script>
 </html>
