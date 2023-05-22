@@ -56,9 +56,10 @@ async function addUser(name, division) {
   try {
     const message = await response.json();
     document.getElementById("error").innerHTML = message.message;
+    window.location.reload();
   } catch (error) {
     console.log(error);
-    document.getElementById("error").innerHTML = "Some Error Occured!!";
+    // document.getElementById("error").innerHTML = "Some Error Occured!!";
   }
 }
 
